@@ -6,7 +6,7 @@ body {
   font-family: 'Oxygen', sans-serif;
 }
 code {
-  white-space: pre-wrap;
+  white-space: pre;
   display: block;
 }
 #navbar {
@@ -64,9 +64,9 @@ main {
     left: unset;
   }
   code{
-    font-size: 0.8rem!important;
-    margin: 0.3rem!important;
-    padding: 0.2rem!important;
+    font-size: 1rem!important;
+    margin: 0.5rem!important;
+    padding: 0.8rem!important;
     line-height: 1.2rem!important;
     color:#7E7!important;
   }
