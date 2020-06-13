@@ -139,6 +139,11 @@
                 Loops
             </header>
             <p>A loop statement allows us to execute a statement or group of statements multiple times.</p>
+            <p>There are twon types of Loops in Python 3</p>
+            <ul>
+                <li>For Loop</li>
+                <li>While Loop</li>
+            </ul>
             <code>
     for n in range(1, 10):
         print(n)
@@ -282,16 +287,19 @@
             <header>
                 Arrays
             </header>
-            <p>
-                In programming, an array is a collection of elements of the same type.
+            <ul>
+                <li>In programming, an array is a collection of elements of the same type.</li>
+                <li>
+                    Arrays are popular in most programming languages like Java, C/C++, JavaScript, and so on. However,
+                    in
+                    Python, they are not that common. When people talk about Python arrays, more often than not, they
+                    are
+                    talking about Python lists. If you don't know what lists are, you should definitely check the Python
+                    List article.</li>
 
-                Arrays are popular in most programming languages like Java, C/C++, JavaScript, and so on. However, in
-                Python, they are not that common. When people talk about Python arrays, more often than not, they are
-                talking about Python lists. If you don't know what lists are, you should definitely check the Python
-                List article.
+                <li>That being said, an array of numeric values is supported in Python by the array module.</li>
+            </ul>
 
-                That being said, an array of numeric values is supported in Python by the array module.
-            </p>
             <code>
     from array import array
 
@@ -342,15 +350,24 @@
             <header>
                 Generator Expressions
             </header>
-            <p>In Python, to create iterators, we can use both regular functions and generators. Generators are written
-                just like a normal function but we use <span class="inline-code">yield()</span> instead of <span
-                    class="inline-code">return()</span> for returning a result. It is more
-                powerful as a tool to implement iterators. It is easy and more convenient to implement because it offers
-                the evaluation of elements on demand. Unlike regular functions which on encountering a return statement
-                terminates entirely, generators use yield statement in which the state of the function is saved from the
-                last call and can be picked up or resumed the next time we call a generator function. Another great
-                advantage of the generator over a list is that it takes much less memory.</p>
-            <code>
+            <ul>
+                <li>
+                    In Python, to create iterators, we can use both regular functions and generators. Generators are
+                    written
+                    just like a normal function but we use <span class="inline-code">yield()</span> instead of <span
+                        class="inline-code">return()</span> for returning a result.
+                </li>
+                <li>It is more
+                    powerful as a tool to implement iterators.</li>
+                <li>It is easy and more convenient to implement because it offers
+                    the evaluation of elements on demand.</li>
+                <li>Unlike regular functions which on encountering a return statement
+                    terminates entirely, generators use yield statement in which the state of the function is saved from
+                    the
+                    last call and can be picked up or resumed the next time we call a generator function.</li>
+                <li>Another great
+                    advantage of the generator over a list is that it takes much less memory.</li>
+            </ul><code>
     values = (x * 2 for x in range(10000))
     len(values) # Error
     for x in values:
@@ -374,18 +391,22 @@
             <header>
                 Exceptions
             </header>
-            <p>Errors that occur at runtime are called exceptions. They occur, for example, when a file we try to open
-                does not exist <span class="inline-code">FileNotFoundError</span>, dividing a number by zero <span
-                    class="inline-code">ZeroDivisionError</span> etc.
-            </p>
-            <p>
-                If exceptions are not handled, an error message is spit out and our program come to a sudden, unexpected
-                halt.
-            </p>
-            <p>
-                In Python, exceptions can be handled using <span class="inline-code">try</span> statement. When
-                exceptions are caught, it's up to you
-                what operator to perform.</p>
+            <ul>
+                <li>Errors that occur at runtime are called exceptions. They occur, for example, when a file we try to
+                    open
+                    does not exist <span class="inline-code">FileNotFoundError</span>, dividing a number by zero <span
+                        class="inline-code">ZeroDivisionError</span> etc.
+                </li>
+                <li>
+                    If exceptions are not handled, an error message is spit out and our program come to a sudden,
+                    unexpected
+                    halt.
+                </li>
+                <li>
+                    In Python, exceptions can be handled using <span class="inline-code">try</span> statement. When
+                    exceptions are caught, it's up to you
+                    what operator to perform.</li>
+            </ul>
             <code>
     # Handling Exceptions
     try:
@@ -406,11 +427,16 @@
             <header>
                 Classes
             </header>
-            <p>Classes provide a means of bundling data and functionality together. Creating a new class creates a new
-                type of object, allowing new instances of that type to be made. Each class instance can have attributes
-                attached to it for maintaining its state. Class instances can also have methods (defined by its class)
-                for modifying its state.
-            </p>
+            <ul>
+                <li>Classes provide a means of bundling data and functionality together. Creating a new class creates a
+                    new
+                    type of object, allowing new instances of that type to be made. Each class instance can have
+                    attributes
+                    attached to it for maintaining its state.
+                </li>
+                <li>Class instances can also have methods (defined by its class)
+                    for modifying its state.</li>
+            </ul>
             <code>
     # Creating classes
     class Point:
@@ -509,7 +535,6 @@
         </footer>
     </main>
 
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 # Technical Documentation Page
 
-This is my project for freeCodeCamp's Responsive Web Design Certification.
+This is my project for freeCodeCamp's Responsive Web Design Certification Course.
 
 **Content Credit:**
 
