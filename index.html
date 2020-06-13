@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Python 3 Cheat Sheet</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>Python 3 Cheat Sheet</header>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Variables" class="nav-link">Variables</a>
+        <a href="#Strings" class="nav-link">Strings</a>
+        <a href="#Type_Conversion" class="nav-link">Type Conversion</a>
+        <a href="#Falsy_Values" class="nav-link">Falsy Values</a>
+        <a href="#Conditional_Statements" class="nav-link">Conditional Statements</a>
+        <a href="#Loops" class="nav-link">Loops</a>
+        <a href="#Functions" class="nav-link">Functions</a>
+        <a href="#Lists" class="nav-link">Lists</a>
+        <a href="#Tuples" class="nav-link">Tuples</a>
+        <a href="#Arrays" class="nav-link">Arrays</a>
+        <a href="#Sets" class="nav-link">Sets</a>
+        <a href="#Dictionaries" class="nav-link">Dictionaries</a>
+        <a href="#Generator_Expressions" class="nav-link">Generator Expressions</a>
+        <a href="#Unpacking_Operator" class="nav-link">Unpacking Operator</a>
+        <a href="#Exceptions" class="nav-link">Exceptions</a>
+        <a href="#Classes" class="nav-link">Classes</a>
+        <a href="#credits">Credits</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>
+                Introduction
+            </header>
+
+            <p>
+                Python is a powerful programming language ideal for scripting and rapid application development. It is
+                used
+                in web development (like: Django and Bottle), scientific and mathematical computing (Orange, SymPy,
+                NumPy)
+                to desktop graphical user Interfaces (Pygame, Panda3D).
+            </p>
+        </section>
+
+
+        <section class="main-section" id="Variables">
+            <header>
+                Variables
+            </header>
+            <p>A variable is a named location used to store data in the memory. </p>
+            <code>
+    a = 1 # integer
+    b = 1.1 # float
+    c = 1 + 2j # complex number (a + bi)
+    d = “a” # string
+    e = True # boolean (True / False)
+            </code>
+        </section>
+        <section class="main-section" id="Strings">
+            <header>
+                Strings
+            </header>
+            <p>A string is a sequence of characters.</p>
+            <code>
+    x = “Python”
+    len(x)
+    x[0]
+    x[-1]
+    x[0:3]
+
+    # Formatted strings
+    name = f”{first} {last}”
+
+    # Escape sequences
+    \” \’ \\ \n
+
+    # String methods
+    x.upper()
+    x.lower()
+    x.title()
+    x.strip()
+    x.find(“p”)
+    x.replace(“a”, “b”)
+    “a” in x
+    </code>
+        </section>
+        <section class="main-section" id="Type_Conversion">
+            <header>
+                Type Conversion
+            </header>
+            <p>The process of converting the value of one data type (integer, string, float, etc.) to another is called
+                type conversion.</p>
+            <code>
+    int(x)
+    float(x)
+    bool(x)
+    string(x)</code>
+        </section>
+        <section class="main-section" id="Falsy_Values">
+            <header>
+                Falsy Values
+            </header>
+
+            <code>
+    0
+    “”
+    []
+    </code>
+        </section>
+        <section class="main-section" id="Conditional_Statements">
+            <header>
+                Conditional Statements
+            </header>
+            <p>The Conditional Statements are used if you want perform different action (run different code) on
+                different
+                condition.</p>
+            <code>
+    if x == 1:
+        print(“a”)
+    elif x == 2:
+        print(“b”)
+    else:
+        print(“c”)
+
+    # Ternary operator
+    x = “a” if n > 1 else “b”
+
+    # Chaining comparison operators
+
+    if 18 <= age < 65: 
+    </code>
+        </section>
+        <section class="main-section" id="Loops">
+            <header>
+                Loops
+            </header>
+            <p>A loop statement allows us to execute a statement or group of statements multiple times.</p>
+            <code>
+    for n in range(1, 10):
+        print(n)
+
+    while n < 10: 
+        print(n) n +=1 
+    </code>
+        </section>
+        <section class="main-section" id="Functions">
+            <header>
+                Functions
+            </header>
+            <p>A function is a group of related statements that perform a specific task. You use <span
+                    class="inline-code">def</span> keyword to create
+                functions in Python.</p>
+            <code>
+    def increment(number, by=1):
+        return number + by
+
+    # Keyword arguments
+        increment(2, by=1)
+
+    # Variable number of arguments
+    def multiply(*numbers):
+        for number in numbers:
+            print number
+
+
+    multiply(1, 2, 3, 4)
+
+    # Variable number of keyword arguments
+    def save_user(**user):
+        ...
+
+
+    save_user(id=1, name="Mosh")
+    </code>
+        </section>
+        <section class="main-section" id="Lists">
+            <header>
+                Lists
+            </header>
+            <p>A list is created by placing all the items (elements) inside a square bracket <span
+                    class="inline-code">[]</span> separated by commas.
+
+                It can have any number of items and they may be of different types (integer, float, string etc.)</p>
+            <code>
+    # Creating lists
+    letters = ["a", "b", "c"]
+    matrix = [[0, 1], [1, 2]]
+    zeros = [0] * 5
+    combined = zeros + letters
+    numbers = list(range(20))
+
+    # Accessing items
+    letters = ["a", "b", "c", "d"]
+    letters[0] # "a"
+    letters[-1] # "d"
+
+    # Slicing lists
+    letters[0:3] # "a", "b", "c"
+    letters[:3] # "a", "b", "c"
+    letters[0:] # "a", "b", "c", "d"
+    letters[:] # "a", "b", "c", "d"
+    letters[::2] # "a", "c"
+    letters[::-1] # "d", "c", "b", "a"
+
+    # Unpacking
+    first, second, *other = letters
+
+    # Looping over lists
+    for letter in letters:
+        ...
+
+    for index, letter in enumerate(letters):
+        ...
+
+    # Adding items
+    letters.append("e")
+    letters.insert(0, "-")
+
+    # Removing items
+    letters.pop()
+    letters.pop(0)
+    letters.remove("b")
+    del letters[0:3]
+
+    # Finding items
+    if "f" in letters:
+        letters.index("f")
+
+    # Sorting lists
+    letters.sort()
+    letters.sort(reverse=True)
+
+    # Custom sorting
+    items = [
+        ("Product1", 10),
+        ("Product2", 9),
+        ("Product3", 11)
+    ]
+
+    items.sort(key=lambda item: item[1])
+
+    # Map and filter
+    prices = list(map(lambda item: item[1], items))
+    expensive_items = list(filter(lambda item: item[1] >= 10, items))
+
+    # List comprehensions
+    prices = [item[1] for item in items]
+    expensive_items = [item for item in items if item[1] >= 10]
+
+    # Zip function
+    list1 = [1, 2, 3]
+    list2 = [10, 20, 30]
+    combined = list(zip(list1, list2)) # [(1, 10), (2, 20)]
+    </code>
+        </section>
+        <section class="main-section" id="Tuples">
+            <header>
+                Tuples
+            </header>
+            <p>Tuple is similar to a list except you cannot change elements of a tuple once it is defined. Whereas in a
+                list, items can be modified.
+
+                Basically, list is mutable whereas tuple is immutable.</p>
+            <code>
+    point = (1, 2, 3)
+    point(0:2) # (1, 2)
+    x, y, z = point
+    if 10 in point:
+        ...
+
+    # Swapping variables
+    x = 10
+    y = 11
+    x, y = y, x
+    </code>
+        </section>
+        <section class="main-section" id="Arrays">
+            <header>
+                Arrays
+            </header>
+            <p>
+                In programming, an array is a collection of elements of the same type.
+
+                Arrays are popular in most programming languages like Java, C/C++, JavaScript, and so on. However, in
+                Python, they are not that common. When people talk about Python arrays, more often than not, they are
+                talking about Python lists. If you don't know what lists are, you should definitely check the Python
+                List article.
+
+                That being said, an array of numeric values is supported in Python by the array module.
+            </p>
+            <code>
+    from array import array
+
+    numbers = array("i", [1, 2, 3])
+    </code>
+        </section>
+        <section class="main-section" id="Sets">
+            <header>
+                Sets
+            </header>
+            <p>A set is an unordered collection of items where every element is unique (no duplicates).</p>
+            <code>
+    first = {1, 2, 3, 4}
+    second = {1, 5}
+
+    first | second # {1, 2, 3, 4, 5}
+    first & second # {1}
+    first - second # {2, 3, 4}
+    first ^ second # {2, 3, 4, 5}
+
+    if 1 in first:
+        ...
+    </code>
+        </section>
+        <section class="main-section" id="Dictionaries">
+            <header>
+                Dictionaries
+            </header>
+            <p>Python dictionary is an unordered collection of items. Each item of a dictionary has a key/value pair.
+
+                Dictionaries are optimized to retrieve values when the key is known.</p>
+            <code>
+    point = {"x": 1, "y": 2}
+    point = dict(x=1, y=2)
+    point["z"] = 3
+    if "a" in point:
+        ...
+    point.get("a", 0) # 0
+    del point["x"]
+    for key, value in point.items():
+        ...
+
+    # Dictionary comprehensions
+    values = {x: x * 2 for x in range(5)}
+    </code>
+        </section>
+        <section class="main-section" id="Generator_Expressions">
+            <header>
+                Generator Expressions
+            </header>
+            <p>In Python, to create iterators, we can use both regular functions and generators. Generators are written
+                just like a normal function but we use <span class="inline-code">yield()</span> instead of <span
+                    class="inline-code">return()</span> for returning a result. It is more
+                powerful as a tool to implement iterators. It is easy and more convenient to implement because it offers
+                the evaluation of elements on demand. Unlike regular functions which on encountering a return statement
+                terminates entirely, generators use yield statement in which the state of the function is saved from the
+                last call and can be picked up or resumed the next time we call a generator function. Another great
+                advantage of the generator over a list is that it takes much less memory.</p>
+            <code>
+    values = (x * 2 for x in range(10000))
+    len(values) # Error
+    for x in values:
+    </code>
+        </section>
+        <section class="main-section" id="Unpacking_Operator">
+            <header>
+                Unpacking Operator
+            </header>
+            <code>
+    first = [1, 2, 3]
+    second = [4, 5, 6]
+    combined = [*first, "a", *second]
+
+    first = {"x": 1}
+    second = {"y": 2}
+    combined = {**first, **second}
+    </code>
+        </section>
+        <section class="main-section" id="Exceptions">
+            <header>
+                Exceptions
+            </header>
+            <p>Errors that occur at runtime are called exceptions. They occur, for example, when a file we try to open
+                does not exist <span class="inline-code">FileNotFoundError</span>, dividing a number by zero <span
+                    class="inline-code">ZeroDivisionError</span> etc.
+            </p>
+            <p>
+                If exceptions are not handled, an error message is spit out and our program come to a sudden, unexpected
+                halt.
+            </p>
+            <p>
+                In Python, exceptions can be handled using <span class="inline-code">try</span> statement. When
+                exceptions are caught, it's up to you
+                what operator to perform.</p>
+            <code>
+    # Handling Exceptions
+    try:
+        …
+    except (ValueError, ZeroDivisionError):
+        …
+    else:
+    # no exceptions raised
+    finally:
+    # cleanup code
+
+    # Raising exceptions
+    if x < 1:  raise ValueError(“…”) # The with
+    statement with open(“file.txt”) as file:  …
+    </code>
+        </section>
+        <section class="main-section" id="Classes">
+            <header>
+                Classes
+            </header>
+            <p>Classes provide a means of bundling data and functionality together. Creating a new class creates a new
+                type of object, allowing new instances of that type to be made. Each class instance can have attributes
+                attached to it for maintaining its state. Class instances can also have methods (defined by its class)
+                for modifying its state.
+            </p>
+            <code>
+    # Creating classes
+    class Point:
+        def __init__(self, x, y): 
+            self.x = x
+            self.y = y
+
+        def draw(self): 
+            …
+
+    # Instance vs class attributes
+    class Point:
+        default_color = “red”
+
+        def __init__(self, x, y): 
+            self.x = x
+
+    # Instance vs class methods
+    class Point:
+        def draw(self): 
+            …
+
+        @classmethod
+        def zero(cls): 
+            return cls(0, 0)
+
+
+        # Magic methods
+        __str__()
+        __eq__()
+        __cmp__()
+        ...
+
+    # Private members
+    class Point:
+        def __init__(self, x): 
+            self.__x = x
+
+
+    # Properties
+    class Point:
+        def __init__(self, x): 
+            self.__x = x
+
+        @property
+        def x(self):
+            return self.__x
+
+        @property.setter:
+        def x.setter(self, value):
+            self.__x = value 
+
+    # Inheritance
+    class FileStream(Stream):
+        def open(self): 
+            super().open()
+            …
+
+    # Multiple inheritance
+    class FlyingFish(Flyer, Swimmer):
+        …
+
+    # Abstract base classes
+    from abc import ABC, abstractmethod
+
+    class Stream(ABC):
+        @abstractmethod
+        def read(self):
+            pass
+
+    # Named tuples
+    from collections import namedtuple
+
+    Point = namedtuple(“Point”, [“x”, “y”])
+    point = Point(x=1, y=2)
+    </code>
+        </section>
+
+        <section id="credits">
+            <header>Credits</header>
+            <p>Code Snippets (Whole Page)</p>
+            <ul>
+                <li><b><a target="_blank" href="https://programmingwithmosh.com/python/python-3-cheat-sheet/">Python 3
+                            Cheat Sheet by Mosh Hamedani</a></b></li>
+            </ul>
+            <p>Content (Definitions)</p>
+            <ul>
+                <li><b><a target="_blank" href="https://www.w3schools.com/">W3Schools</a></b></li>
+                <li><b><a target="_blank" href="https://www.programiz.com/python-programming/">Programiz</a></b></li>
+                <li><b><a target="_blank" href="https://docs.python.org/3/">Python 3 Documentation</a></b></li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Made By <b><a href="https://github.com/gagangulyani">Gagan Deep Singh</a></b></p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
